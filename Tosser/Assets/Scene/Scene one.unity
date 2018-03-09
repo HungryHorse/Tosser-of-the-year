@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 1183767822}
   - component: {fileID: 1183767821}
   - component: {fileID: 1183767820}
+  - component: {fileID: 1183767824}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -281,6 +282,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1183767824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1183767819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74beace35c450374fa00ea56c9ccd37c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 1000
+  Projectile: {fileID: 1763839159652528, guid: 7c0094b030922f44c9642af40b7e3be2, type: 2}
+  Sphere: {fileID: 1507834266}
 --- !u!1 &1372139159
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +388,7 @@ GameObject:
   - component: {fileID: 1507834270}
   - component: {fileID: 1507834269}
   - component: {fileID: 1507834268}
+  - component: {fileID: 1507834272}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -446,6 +462,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1507834266}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1507834272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507834266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebfc55b734a7b3d4dba4b13e86338ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theCamera: {fileID: 1372139162}
+  smoothing: 5
+  adjustmentAngle: 0
+  target: {fileID: 0}
 --- !u!1 &1560471741
 GameObject:
   m_ObjectHideFlags: 0

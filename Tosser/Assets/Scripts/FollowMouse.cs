@@ -9,14 +9,18 @@ public class FollowMouse : MonoBehaviour
     public float adjustmentAngle = 0.0f;
     public Transform target;
 
-    void Update()
+    void Start()
     {
-        Vector3 target = theCamera.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 difference = target - transform.position;
+    }
 
-        difference.Normalize();
+    void FixedUpdate()
+    {
 
-        Vector3 newPos = new Vector3(target.position.x, target.position.y, transform.position.z);
-        transform.position = Vector3.Lerp(transform.position, newPos, (smoothing * 0.1f));
+        if (Input.GetButton("Fire1"))
+        {
+            Vector3 newPos = theCamera.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = Vector2.Lerp(transform.position, newPos, (smoothing * 0.1f));
+        }
     }
 }
+
