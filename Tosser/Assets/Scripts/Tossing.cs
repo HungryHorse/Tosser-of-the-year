@@ -5,9 +5,8 @@ using UnityEngine;
 public class Tossing : MonoBehaviour {
 
     public int power;
-    public float angle;
     public GameObject Projectile;
-    public Transform spawnpoint;
+    Transform spawnpoint;
 
 	void Update () {
 		
@@ -15,6 +14,9 @@ public class Tossing : MonoBehaviour {
 
     void Shoot()
     {
-        Instantiate(Projectile, spawnpoint);
+        GameObject newBall = Instantiate(Projectile, spawnpoint);
+
+        Rigidbody2D rigidBody = newBall.AddComponent<Rigidbody2D>();
+        rigidBody.AddForce(new Vector2(power,0));
     }
 }
